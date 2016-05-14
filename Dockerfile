@@ -10,6 +10,4 @@ RUN apt-get update && apt-get install -y \
 	&& docker-php-ext-install opcache \
 	&& docker-php-ext-install pdo_mysql \
 	&& docker-php-ext-install mysqli \
-	&& usermod -u 1000 www-data
-
-WORKDIR "/var/www/html"
+	&& usermod -u 1000 www-data && groupmod -g 1000 www-data
