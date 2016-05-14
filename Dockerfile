@@ -13,3 +13,4 @@ RUN apt-get update && apt-get install -y \
 	&& usermod -u 1000 www-data
 
 WORKDIR "/var/www/html"
+CMD chown -R www-data:www-data /var/www/html && php-fpm
