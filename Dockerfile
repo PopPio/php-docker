@@ -23,11 +23,9 @@ ENV NR_INSTALL_SILENT 1
 ENV NR_INSTALL_KEY **None**
 ENV NR_APP_NAME "Default App Name"
 	
-COPY config/custom.ini /usr/local/etc/php/conf.d/
+COPY config/custom.ini config/zcustom.ini /usr/local/etc/php/conf.d/
 
-# Add custom script for running New Relic daemon
-ADD run.sh /run.sh
-RUN chmod +x /run.sh
+RUN bash newrelic-install install
 
 ENTRYPOINT ["/run.sh"]
 
