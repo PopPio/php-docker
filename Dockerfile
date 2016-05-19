@@ -20,7 +20,7 @@ RUN wget -O- https://download.newrelic.com/548C16BF.gpg | apt-key add - && \
 	apt-get clean
     
 ENV NR_INSTALL_SILENT 1
-ENV NR_INSTALL_KEY **None**
+ENV NR_INSTALL_KEY "1234567890abcdefghij1234567890abcdefghij"
 ENV NR_APP_NAME "Default App Name"
 	
 COPY config/custom.ini config/zcustom.ini /usr/local/etc/php/conf.d/
