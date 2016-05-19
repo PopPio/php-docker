@@ -26,5 +26,5 @@ ENV NR_APP_NAME "Default App Name"
 COPY config/custom.ini config/zcustom.ini /usr/local/etc/php/conf.d/
 COPY php-fpm/zcustom.conf /usr/local/etc/php-fpm.d/
 
-RUN bash newrelic-install install
+#RUN bash newrelic-install install
 
