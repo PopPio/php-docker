@@ -27,5 +27,3 @@ COPY config/custom.ini config/zcustom.ini /usr/local/etc/php/conf.d/
 
 RUN bash newrelic-install install
 
-ENTRYPOINT ["/run.sh"]
-
